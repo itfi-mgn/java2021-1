@@ -13,7 +13,8 @@ public class CallUpperCase {
 	public static void main(String[] args) throws IOException, InterruptedException {
 		// TODO Auto-generated method stub
 		final Process	p = new ProcessBuilder()
-							.command("c:/program files/java/jdk-13.0.1/bin/java.exe","-Dkey=value","lesson2/UpperCase","abcde")
+							.command("c:/program files/java/jdk-13.0.1/bin/java.exe","-Dkey=value","lesson2/Calculator","abcde")
+//							.command("c:/program files/java/jdk-13.0.1/bin/java.exe","-Dkey=value","lesson2/UpperCase","abcde")
 							.directory(new File("D:/eclipse-ws/java2021-1/bin"))
 							.start();
 		Thread	t = new Thread(()->{
@@ -45,9 +46,10 @@ public class CallUpperCase {
 		
 		
 		try(final Writer	wr = new OutputStreamWriter(p.getOutputStream())) {
-			wr.write("test\n");
-			wr.write("new test\n");
-			wr.write("last test\n");
+//			wr.write("test\n");
+//			wr.write("new test\n");
+//			wr.write("last test\n");
+			wr.write("15+3+10+22\n");
 			wr.flush();
 		}
 		p.waitFor();
