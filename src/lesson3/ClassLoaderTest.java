@@ -55,6 +55,7 @@ public class ClassLoaderTest {
 		Class<Security>	sec = (Class<Security>) cl.loadClass("lesson3.Security");
 		Class<Security>	sec1 = (Class<Security>) cl1.loadClass("lesson3.Security");
 		
+//		Thread.currentThread().getContextClassLoader();
 		Security		secInst = sec1.newInstance();
 	}
 }
