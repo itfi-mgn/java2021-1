@@ -17,4 +17,9 @@ class Human {
 	String 	name;
 	String 	patroname;
 	int		age;
+	@Override
+	public String toString() {
+		return "Human [family=" + family + ", name=" + name + ", patroname=" + patroname + ", age=" + age + "]";
+	}
+	
 }

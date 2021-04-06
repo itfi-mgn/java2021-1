@@ -2,6 +2,8 @@ package lesson5;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
 import java.text.DecimalFormat;
 
 import javax.swing.InputVerifier;
@@ -24,6 +26,24 @@ public class JDialogTest {
 		DecimalFormat	df = new DecimalFormat("#########");
 		JTextField	text = new JFormattedTextField(df);
 		JButton		press = new JButton("Press me");
+		
+		press.setToolTipText("<html><body><font color=red>Press me PLEASE!!!!!!!</font></body></html>");
+
+		text.addFocusListener(new FocusListener() {
+			
+			@Override
+			public void focusLost(FocusEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void focusGained(FocusEvent e) {
+				// TODO Auto-generated method stub
+				label.setText("Type PLEANSE!!!!!!");
+			}
+		});
+		
 		
 		panel.setLayout(new BorderLayout());
 		panel.add(label,BorderLayout.NORTH);
