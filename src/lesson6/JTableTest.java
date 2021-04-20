@@ -2,6 +2,7 @@ package lesson6;
 
 import java.awt.Color;
 import java.awt.Component;
+import java.io.File;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -15,6 +16,8 @@ import javax.swing.table.TableModel;
 
 public class JTableTest extends JFrame {
 	public JTableTest() {
+//		final File[]	f = new File("c:/sqlDeveloper").listFiles();
+		
 		TableModel tm = new DefaultTableModel() {
 //			String[][]	content = new String[][] {
 //							new String[] {"val 1.1","val 1.2","val 1.3"},
@@ -98,7 +101,6 @@ public class JTableTest extends JFrame {
 				return label;
 			}
 		});
-		
 		
 		getContentPane().add(pane);
 	}
